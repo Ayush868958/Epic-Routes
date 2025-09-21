@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Epic Routes — Travel Super App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="logo">ER</div>
+        <div>
+          <h1>Epic Routes</h1>
+          <div class="tag">Your smarter travel companion</div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="#" data-page="home" class="nav-link active">Home</a>
+        <a href="#" data-page="location" class="nav-link">Location</a>
+        <a href="#" data-page="food" class="nav-link">Food</a>
+        <a href="#" data-page="hotels" class="nav-link">Hotels</a>
+        <a href="#" data-page="transport" class="nav-link">Transport</a>
+        <a href="#" data-page="booking" class="nav-link">Booking</a>
+        <a href="#" data-page="emergency" class="nav-link emergency-link">Emergency</a>
+      </nav>
+      <button class="cta btn-primary" id="openBookingTop">Book</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Home -->
+    <section id="home" class="page page-bg home-bg active">
+      <div class="wrap">
+        <div class="hero glass">
+          <h2>Plan. Book. Travel — All in one place.</h2>
+          <p class="lead">Epic Routes combines travel tools, partner bookings and safety features — polished, fast and mobile-first.</p>
+          <div class="hero-actions">
+            <button class="btn-primary" data-page-target="hotels">Find Hotels</button>
+            <button class="btn-accent" data-page-target="transport">Find Rides</button>
+            <button class="btn-outline" data-page-target="location">Live Location</button>
+          </div>
+        </div>
+
+        <div class="features grid glass">
+          <div class="f"><h4>Live GPS</h4><p>High-accuracy tracking & shareable links.</p></div>
+          <div class="f"><h4>Smart Booking</h4><p>Hotels, flights & rides in one place.</p></div>
+          <div class="f"><h4>Food On-the-go</h4><p>Quick links to delivery platforms.</p></div>
+          <div class="f"><h4>Safety</h4><p>One-tap emergency + broadcast.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section id="location" class="page page-bg location-bg">
+      <div class="wrap">
+        <div class="card glass">
+          <h3>Live Tracking</h3>
+          <p class="muted">Start to begin sharing your live location.</p>
+          <div class="row">
+            <button id="startTrack" class="btn-primary">Start Tracking</button>
+            <button id="stopTrack" class="btn-outline" disabled>Stop</button>
+            <button id="shareLocationBtn" class="btn-accent">Share</button>
+          </div>
+          <div class="coords small">
+            <div><b>Lat:</b> <span id="lat">—</span></div>
+            <div><b>Lng:</b> <span id="lng">—</span></div>
+            <div><b>Acc:</b> <span id="acc">—</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Food -->
+    <section id="food" class="page page-bg food-bg">
+      <div class="wrap">
+        <div class="card glass">
+          <h3>Food Delivery</h3>
+          <div class="row">
+            <input id="foodCity" placeholder="City (e.g. Mumbai)" />
+            <div class="radio-row">
+              <label><input type="radio" name="foodPref" value="Veg" checked /> Veg</label>
+              <label><input type="radio" name="foodPref" value="Non-Veg" /> Non-Veg</label>
+            </div>
+          </div>
+          <div class="partner-links">
+            <button class="partner" data-url="https://www.swiggy.com/search?q=">Swiggy</button>
+            <button class="partner" data-url="https://www.zomato.com/search?q=">Zomato</button>
+            <button class="partner" data-url="https://www.ubereats.com/search?q=">Uber Eats</button>
+            <button class="partner" data-url="https://www.foodpanda.in/search?searchTerm=">Foodpanda</button>
+          </div>
+          <div id="foodResults" class="tiles"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hotels -->
+    <section id="hotels" class="page page-bg hotels-bg">
+      <div class="wrap">
+        <div class="card glass">
+          <h3>Hotels</h3>
+          <div class="row">
+            <input id="hotelCity" placeholder="Enter city (e.g. Delhi)" />
+            <input id="maxPrice" type="number" placeholder="Max price ₹" />
+          </div>
+          <div class="partner-links">
+            <button class="partner" data-url="https://www.booking.com/searchresults.html?ss=">Booking.com</button>
+            <button class="partner" data-url="https://in.hotels.com/search.do?q-destination=">Hotels.com</button>
+            <button class="partner" data-url="https://www.expedia.co.in/Hotel-Search?destination=">Expedia</button>
+            <button class="partner" data-url="https://www.airbnb.co.in/s/">Airbnb</button>
+          </div>
+          <div id="hotelResults" class="tiles"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transport -->
+    <section id="transport" class="page page-bg transport-bg">
+      <div class="wrap">
+        <div class="card glass">
+          <h3>Transport</h3>
+          <div class="partner-links">
+            <button class="partner" data-url="https://www.uber.com/">Uber</button>
+            <button class="partner" data-url="https://www.olacabs.com/">Ola</button>
+            <button class="partner" data-url="https://www.irctc.co.in/">IRCTC</button>
+            <button class="partner" data-url="https://www.makemytrip.com/flights/">MakeMyTrip</button>
+            <button class="partner" data-url="https://www.redbus.in/">RedBus</button>
+            <button class="partner" data-url="https://www.rapido.bike/">Rapido</button>
+          </div>
+          <div id="transportResults" class="tiles"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking" class="page page-bg booking-bg">
+      <div class="wrap">
+        <div class="card glass">
+          <h3>Booking Center</h3>
+          <div class="row">
+            <input id="bookingCity" placeholder="City (e.g. Goa)" />
+            <button id="loadBookingDemo" class="btn-primary">Load Options</button>
+          </div>
+          <div id="bookingResults" class="tiles"></div>
+          <div class="actions" style="margin-top:12px">
+            <button id="bookBtn" class="btn-accent" disabled>Book Selected</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency -->
+    <section id="emergency" class="page page-bg emergency-bg">
+      <div class="wrap">
+        <div class="card glass emergency-card">
+          <h3>Emergency</h3>
+          <p class="muted">One-tap emergency dial & broadcast your current location.</p>
+          <div class="row danger-row">
+            <button id="emergencyBtn" class="btn-danger">📞 Emergency Call</button>
+            <button id="broadcastBtn" class="btn-danger-outline">📡 Broadcast</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div>© Epic Routes • Prototype</div>
+      <div class="muted">Built for demo • Replace demo data with live APIs</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
