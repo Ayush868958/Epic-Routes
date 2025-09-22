@@ -1,8 +1,4 @@
-/* Epic Routes — premium JS (paste into script.js)
-   Demo-first: works offline. Hooks for live APIs can be added later.
-*/
 
-/* ------------------ Navigation ------------------ */
 const navLinks = document.querySelectorAll('.nav-link');
 const pages = document.querySelectorAll('.page');
 const openBookingTop = document.getElementById('openBookingTop');
@@ -224,3 +220,4 @@ broadcastBtn && broadcastBtn.addEventListener('click', async () => {
 
 /* ------------------ Initial render ------------------ */
 updateFood(); updateHotels();
+
