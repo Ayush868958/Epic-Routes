@@ -1,4 +1,4 @@
-/* Epic Routes — Full Screen Background & UI Tweaks */
+
 :root{
   --blue:#0b61d6; --blue-2:#0066ff; --accent:#ff7a18; --green:#00a86b;
   --danger:#d92b2b; --muted:#64748b; --glass: rgba(255,255,255,0.72);
@@ -155,3 +155,4 @@ body{
   .nav-link{font-size:13px;padding:6px 8px}
   .hero h2{font-size:16px}
 }
+
